@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃학습</title>
+    <style>
+        /* 클래스 지정할 때 .클래스명 */
+        .container {
+          display: grid;
+          grid-template-rows: 100px 1fr;
+          grid-template-columns: 15% 1fr 20%;
+          grid-template-areas:
+            "header header header"
+            "nav section aside";
+          height: 900px;
+          width: 100%;
+        }
+      
+        header {
+          grid-area: header;
+          background-color: lightblue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      /* 아이디를 표시 */
+      #in2 {
+        color:aqua;
+        background-color: black;
+      }
+      h3{
+        color: brown;
+      }
+        nav {
+          grid-area: nav;
+          background-color: #12726a;
+        }
+      
+        section {
+          grid-area: section;
+          background-color: blanchedalmond;
+          padding: 25px;
+        }
+      
+        aside {
+          grid-area: aside;
+          background-color: #f4f4f4;
+          border: 3px solid gray;
+        }
+      </style>
+</head>
+<body> 1
+    <div class="container">
+      <header>헤더
+        <h1>Stay_sim</h1>
+      </header>
+      <nav>네비
+        <ul>
+            <li><a href="#in1">성함</a></li>
+            <li><a href="#in2">메뉴선택</a></li>
+            <li><a href="#in3">방문횟수</a></li>
+            
+        </ul>
+      </nav>
+      <section>본문
+        <article id="in1">
+            <h3>1. 정보</h3>
+            
+            <p><b>성함을 입력해주세요: </b>
+                <input type="text" value="nickname" maxlength="30"
+                    size="30"></p>
+            <p><b>ID & Password</b><br>
+                <input type="text" placeholder="아이디"><br>
+                <input type="password" placeholder="비밀번호"></p>
+            
+                
+        </article>
+        <article id=in2>
+            <h3>2. 매뉴 선택</h3>
+            <p>coffee</p>
+            <input type="text" list="coffee">
+            <datalist id="coffee">
+                <option value="아메리카노(HOT)"></option>
+                <option value="아메리카노(Iced)"></option>
+                <option value="카페라떼"></option>
+                <option value="에소프레소"></option>
+                <option value="콜드브루"></option>
+                <option value="카푸치노"></option>
+            </datalist>
+            <p>Beverage</p>
+            <input type="text" list="Beverage">
+            <datalist id="Beverage">
+                <option value="자몽에이드"></option>
+                <option value="망고에이드"></option>
+                <option value="감귤에이드"></option>
+                <option value="딸기라떼"></option>
+                <option value="초코라떼"></option>
+            </datalist>
+        </article>
+        <article id="in3">
+            <h3>3. 방문횟수</h3>
+            <p>키우고 싶은 동물은</p>
+            <select>
+                <option value="ONE">1</option>
+                <option value="TWO">2</option>
+                <option value="THREE">3</option>
+                <option value="FOUR">4</option>
+                <option value="FIVE">5</option>
+            </select>
+        </article>
+        
+      </section>
+      <aside id="Cafe Announcements">사이드
+        <h3>Cafe Announcements</h3>
+        <ul>
+          <li>매주 일요일은 휴무입니다.</li>
+          <li>매장 이용 가능 시간은 2시간입니다.</li>
+          <li> 계좌이체는 불가합니다.</li>
+        </ul>
+            
+            
+      </aside>
+    </div>
+  </body>
+</html>

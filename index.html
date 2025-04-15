@@ -1,133 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stay_sim</title>
-  <style>
-    /* 클래스 지정할 때 .클래스명 */
-    .container {
-      display: grid;
-      grid-template-rows: 100px 1fr;
-      grid-template-columns: 15% 1fr 20%;
-      grid-template-areas:
-        "header header header"
-        "nav section aside";
-      height: 900px;
-      width: 100%;
-    }
-
-    header {
-      grid-area: header;
-      background-color: rgb(233, 95, 14);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* 아이디를 표시 */
-    #in2 {
-      color: rgb(17, 16, 16);
-      background-color: blanchedalmond;
-    }
-
-    h3 {
-      color: rgb(10, 10, 10);
-    }
-
-    nav {
-      grid-area: nav;
-      background-color: #f35e09;
-    }
-
-    section {
-      grid-area: section;
-      background-color: blanchedalmond;
-      padding: 25px;
-    }
-
-    aside {
-      grid-area: aside;
-      background-color: #f4f4f4;
-      border: 3px solid gray;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심재환pt</title>
 </head>
+<body>
+    <h1>심재환의 홈페이지 만들기</h1>
+    <h2>이미지를 넣고 싶어요</h2>
+    <img src="image/KakaoTalk_20250311_160046954.jpg" alt="">
+    <ul>
+        <h2>나의 취미</h2>
+        <ol type='I' start='3'> 
+            <li> 책읽기</li>
+            <li>12시간 자기</li>
+            <li>영화 보기</li>
+        </ol>
+    <dl>
+        <dt>책읽기</dt>
+        <dd>내가 요즘 들어 읽고 있는 책은 한강 작가의 채식주의자 이다.</dd>
+        <dt><i>12시간 자기</i></dt>
+        <dd>내가 취미 중에 젤 즐겨하는 활동이다.</dd>
+        <dt>영화 보기</dt>
+        <dd>최근 본 영화 중에 가장 재밌었던 영화는 미키 17이다.</dd>
+    </dl>
+    </ul>
+<h2>내 시간표이다.</h2>
+<table border="3">
+    <tr>
+        <td>월</td><td>화</td><td>수</td>
+    </tr>
+    <tr>
+        <td rowspan="3">파이썬</td><td>프로그래밍</td><td>핀테크학과</td>
+    </tr>
+    <tr>
+        <td colspan="2">프로그래밍</td>
+    </tr>
+    <tr>
+        <td>프로그래밍</td><td>핀테크학과</td>
+    </tr>
+</table>
+<table border="1">
+    <thead>
+        <tr><th><img src="image/KakaoTalk_20250311_160046954.jpg" alt=""></th><th><img src="image/사본 -autodraw 2025. 3. 11. 오후 3_27_48.png" alt=""></th></tr>
+        <tr><th><img src="image/사본 -flower-9453063_1280 (1).jpg" alt=""></th><th><img src="image/사본 -heart-9360465_1280.jpg" alt=""></th></tr>
+    </thead>
 
-<body> 1
-  <div class="container">
-    <header>
-      <h1>Stay_sim</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#in1">성함</a></li>
-        <li><a href="#in2">메뉴선택</a></li>
-        <li><a href="#in3">방문횟수</a></li>
-
-      </ul>
-    </nav>
-    <section>
-      <article id="in1">
-        <h3>1. 정보</h3>
-
-        <p><b>성함을 입력해주세요: </b>
-          <input type="text"  maxlength="30" size="30">
-        </p>
-        <p><b>ID & Password</b><br>
-          <input type="text" placeholder="아이디"><br>
-          <input type="password" placeholder="비밀번호">
-        </p>
-
-
-      </article>
-      <article id=in2>
-        <h3>2. 매뉴 선택</h3>
-        <p>coffee</p>
-        <input type="text" list="coffee">
-        <datalist id="coffee">
-          <option value="아메리카노(HOT)"></option>
-          <option value="아메리카노(Iced)"></option>
-          <option value="카페라떼"></option>
-          <option value="에소프레소"></option>
-          <option value="콜드브루"></option>
-          <option value="카푸치노"></option>
-        </datalist>
-        <p>Beverage</p>
-        <input type="text" list="Beverage">
-        <datalist id="Beverage">
-          <option value="자몽에이드"></option>
-          <option value="망고에이드"></option>
-          <option value="감귤에이드"></option>
-          <option value="딸기라떼"></option>
-          <option value="초코라떼"></option>
-        </datalist>
-      </article>
-      <article id="in3">
-        <h3>3. 방문횟수</h3>
-        <p>키우고 싶은 동물은</p>
-        <select>
-          <option value="ONE">1</option>
-          <option value="TWO">2</option>
-          <option value="THREE">3</option>
-          <option value="FOUR">4</option>
-          <option value="FIVE">5</option>
-        </select>
-      </article>
-
-    </section>
-    <aside id="Cafe Announcements">
-      <h3>Cafe Announcements</h3>
-      <ul>
-        <li>매주 일요일은 휴무입니다.</li>
-        <li>매장 이용 가능 시간은 2시간입니다.</li>
-        <li> 계좌이체는 불가합니다.</li>
-      </ul>
-
-
-    </aside>
-  </div>
+</table>
 </body>
-
 </html>
